@@ -27,47 +27,52 @@ class Review extends StatelessWidget{
     );
     final star_border = Container(
       margin: EdgeInsets.only(
-        top: 20.0,
+        top: 5.0,
         right: 3.0,
       ),
       child: Icon(
         Icons.star_border,
         color: Colors.amber,//Color(0xFF0xFFf),
+        size: 13.0,
       ),
     );
     final star_half = Container(
       margin: EdgeInsets.only(
-        top: 20.0,
+        top: 5.0,
         right: 3.0,
       ),
       child: Icon(
         Icons.star_half,
         color: Colors.amber,//Color(0xFF0xFFf),
+        size: 13.0,
       ),
     );
     final star = Container(
       margin: EdgeInsets.only(
-        top: 20.0,
+        top: 2.0,
         right: 3.0,
       ),
       child: Icon(
         Icons.star,
         color: Colors.amber,//Color(0xFF0xFFf),
+        size: 13.0,
       ),
     );
     final user_name = Container(
-      child: Text(name),
+      child: Text(
+        name,
+        style: TextStyle(
+            fontSize: 20.0,
+            fontFamily: "Lato"
+        ),
+      ),
       margin: EdgeInsets.only(
         top: 5.0,
-        left: 20.0
-      ),
-      style: TextStyle(
-          fontSize: 20.0,
-          fontFamily: "Lato"
+        left: 10.0
       ),
     );
     final numbReviews = Text(
-      "$n_reviews review",
+      "$n_reviews reviews ",
       style: TextStyle(
           fontSize: 13.0,
           fontFamily: "Lato",
@@ -75,27 +80,35 @@ class Review extends StatelessWidget{
       ),
     );
     final numbPhotos = Text(
-      "$n_photos photos",
+      "$n_photos photos ",
       style: TextStyle(
           fontSize: 13.0,
           fontFamily: "Lato",
           color: Color(0xFFa3a5a7)
       ),
     );
-    final review_user_detail = Row(
-      children: [
-        numbReviews,
-        numbPhotos,
-        Row(
-          children: [
-            star,
-            star,
-            star_border,
-            star_border,
-            star_border
-          ],
-        )
-      ],
+    final review_user_detail = Container(
+      margin: EdgeInsets.only(
+        left: 10.0,
+        top: 5.0,
+        right: 5.0
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          numbReviews,
+          numbPhotos,
+          Row(
+            children: [
+              star,
+              star,
+              star_half,
+              star_border,
+              star_border
+            ],
+          )
+        ],
+      )
     );
     final description_detail = Container(
       child: Text(
@@ -110,7 +123,7 @@ class Review extends StatelessWidget{
       ),
       margin: EdgeInsets.only(
           top: 5.0,
-          left: 5.0
+          left: 10.0
       ),
     );
     final review_detail = Column(
