@@ -7,7 +7,7 @@ void main() {
   runApp(MyApp()); // para correr la app, punto de inicio de una app en flutter
 }
 
-// testing for jenkins
+// Test Jenkins Server on AWS
 // MyApp es una clase que contiene todos los widgets
 // StatelessWidget es la clase padre de los widgets
 class MyApp extends StatelessWidget {
