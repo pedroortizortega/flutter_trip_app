@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'card_image_list_vertical.dart';
-import 'header_appbar.dart';
+import 'package:flutter_trip_app/Place/ui/screens/header_appbar.dart';
+import 'package:flutter_trip_app/Place/ui/widgets/card_image_list_vertical.dart';
 
 class SearchTrips extends StatelessWidget {
   String text_for_desc =

@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
-import 'user_contact.dart';
 import 'dart:core';
 
-class UserContactColumn extends StatelessWidget{
+import 'package:flutter_trip_app/User/ui/widgets/user_contact.dart';
+
+class UserContactColumn extends StatelessWidget {
   Map dictContacts;
   UserContactColumn(this.dictContacts);
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    var contacts = <Widget>[]; // Para hacer una lista de widgets, List() no funciona
-    for (var j=0; j < dictContacts.length; j++){
-      contacts.add(UserContact(dictContacts[j]["contactImg"], dictContacts[j]["contactName"], dictContacts[j]["contactDescription"]));
+    var contacts =
+        <Widget>[]; // Para hacer una lista de widgets, List() no funciona
+    for (var j = 0; j < dictContacts.length; j++) {
+      contacts.add(UserContact(
+          dictContacts[j]["contactImg"],
+          dictContacts[j]["contactName"],
+          dictContacts[j]["contactDescription"]));
     }
     final contact_column = Container(
       margin: EdgeInsets.only(

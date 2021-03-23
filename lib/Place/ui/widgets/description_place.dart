@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'button_purple_ink.dart';
-class DescriptionPlace extends StatelessWidget{
+
+class DescriptionPlace extends StatelessWidget {
   String namePlace;
   int numStars;
   String descriptionPlace;
@@ -25,7 +26,7 @@ class DescriptionPlace extends StatelessWidget{
       ),
       child: Icon(
         Icons.star_half,
-        color: Colors.amber,//Color(0xFF0xFFf),
+        color: Colors.amber, //Color(0xFF0xFFf),
       ),
     );
     final star = Container(
@@ -35,16 +36,12 @@ class DescriptionPlace extends StatelessWidget{
       ),
       child: Icon(
         Icons.star,
-        color: Colors.amber,//Color(0xFF0xFFf),
+        color: Colors.amber, //Color(0xFF0xFFf),
       ),
     );
 
     final description_place = Container(
-      margin: EdgeInsets.only(
-          top: 5.0,
-          left: 20.0,
-          right: 17.0
-      ),
+      margin: EdgeInsets.only(top: 5.0, left: 20.0, right: 17.0),
       child: Text(
         descriptionPlace,
         style: TextStyle(
@@ -67,32 +64,21 @@ class DescriptionPlace extends StatelessWidget{
           child: Text(
             namePlace,
             style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.w900,
-              fontFamily: "Lato"
-            ),
+                fontSize: 30.0,
+                fontWeight: FontWeight.w900,
+                fontFamily: "Lato"),
             textAlign: TextAlign.left,
             softWrap: true,
           ),
         ),
         Row(
-          children: [
-            star,
-            star,
-            star,
-            star_half,
-            star_border
-          ],
+          children: [star, star, star, star_half, star_border],
         )
       ],
     );
 
     final full_description = Column(
-      children: [
-        title_starts,
-        description_place,
-        ButtonPurpleInk("Navigate")
-      ],
+      children: [title_starts, description_place, ButtonPurpleInk("Navigate")],
     );
 
     return full_description;

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'card_image_list.dart';
-import 'gradient_back.dart';
+import 'package:flutter_trip_app/User/ui/widgets/gradient_back_contacts.dart';
 
-class HeaderAppBarContact extends StatelessWidget{
+class HeaderAppBarContact extends StatelessWidget {
   @override
   String nameSectionBar;
   HeaderAppBarContact(this.nameSectionBar);
@@ -15,5 +14,4 @@ class HeaderAppBarContact extends StatelessWidget{
     );
     return appBarContact;
   }
-
 }
